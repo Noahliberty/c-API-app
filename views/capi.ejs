@@ -1,0 +1,33 @@
+<% include ./partials/header %>
+
+<h1>
+	Capi App
+</h1>
+
+<form action="/capi" method="post">
+		<input type="text" name="input" placeholder="Type sentance to be capitalized">
+		<button>Convert Sentence</button>
+</form>
+
+<form>
+	
+		<input type="text" name="output" value="<%= output %>">
+	
+		<!-- <input type="text" name="output" value="output"> -->
+	
+		
+</form>
+
+<div>
+	<a href="/landing">BACK TO THE START</a>
+</div>
+<div>
+<a href="/instructions">HOW TO USE THE APP</a>
+</div>
+
+<% include ./partials/footer %>
+    
+
+
+
+ 
