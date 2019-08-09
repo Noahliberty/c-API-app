@@ -1,31 +1,54 @@
-<% include ./partials/header %>
-
-<h1>
-	Capi App
-</h1>
-
-<form action="/capi" method="post">
-		<input type="text" name="input" placeholder="Type sentance to be capitalized">
-		<button>Convert Sentence</button>
-</form>
-
-<form>
-	
-		<input type="text" name="output" value="<%= output %>">
-	
-		<!-- <input type="text" name="output" value="output"> -->
-	
+<html>
+    <head>
+		<!-- Make site responsive on mobile/tablet -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Capi App</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/app.css">
 		
-</form>
+	</head>
+	<body>
+		<div class="ui center aligned container">
+			<h1 class="ui header">Capi App</h1>
+			<div class="ui divider"></div>
+			
+			
+			
+			
+			<form class="ui form" action="/capi" method="post">
+				<div class="field">
+					<label>What Can I Capi For You?</label>
+					<input class="ui input focus" type="text" name="input" placeholder="Type sentance to be capitalized...">
+				</div>
+				<div class="field">
+					<label>This Will Start Your Capi Conversion!</label>
+					<button class="ui button green">Convert Sentence</button>
+				</div>
+				<div class="field">
+					<label>Your Capified Sentance</label>
+					<input type="text" name="output" placeholder="...and it will come out here" value="<%= output %>">
+					<!-- <input type="text" name="output" value="output"> -->
+				</div>
+			</form>
+			<div>
+				<h3 class="ui header">Instructions:</h3>
+				<p>
+					To use the Capi App just type the sentance in the first field and hit convert and Capi will chage the first letter of each word into a CAPItal!!
+				</p>
+			</div>
+		</div>
+	
 
-<div>
-	<a href="/landing">BACK TO THE START</a>
-</div>
-<div>
-<a href="/instructions">HOW TO USE THE APP</a>
-</div>
-
-<% include ./partials/footer %>
+<!-- JQuery and Semantic .js files	 -->
+		<script
+		  src="https://code.jquery.com/jquery-3.4.1.min.js"
+		  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		  crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>	
+	
+	</body>
+</html>
     
 
 

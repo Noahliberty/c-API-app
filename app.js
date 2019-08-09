@@ -1,34 +1,29 @@
 const express       = require("express"),
       app           = express(),
 	  bodyParser    = require("body-parser"),
-      mongoose      = require("mongoose");
+      mongoose      = require("mongoose"),
+	  path 			= require("path");
 
-let output = "output";
+let output = "";
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Redirect
 
 app.get("/", (req, res) => {
-	res.redirect("/landing");
+	res.redirect("/capi");
 });
-	
-
-// Menu with options: Use app // instructions
-app.get("/landing", (req, res) => {
-	res.render("landing");
-});
-
 
 // App running page w/ input. End users would copy string in and it would be converted and automatically be displayed // option to copy to clip board or auto copy?
 app.get("/capi", (req, res) => {
 	// let string = req.body.input;
 	
-	res.render("capi", {output: "output"});
+	res.render("capi", {output: output});
 });
 
-
+// Route to handle application logic and rerender the page 
 app.post("/capi", (req, res) => {
 	let userInput = req.body.input;	
 	let transform = function siteLinks(str) {
