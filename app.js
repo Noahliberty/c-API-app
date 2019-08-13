@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 	res.redirect("/capi");
 });
 
-// App running page w/ input. End users would copy string in and it would be converted and automatically be displayed // option to copy to clip board or auto copy?
+// App main page w/ input. End users would copy string in and it would be converted and automatically be displayed // option to copy to clip board or auto copy?
 app.get("/capi", (req, res) => {
 	// let string = req.body.input;
 	
@@ -34,7 +34,6 @@ let bigLetters = array.map(word => word.replace(word.charAt(0), word.charAt(0).t
 // 	Rejoin into new string
 let finalSentance = bigLetters.join(" ");
 // 	return result
-		console.log(finalSentance);
 	res.render("capi", {output: finalSentance});
 		}
 
