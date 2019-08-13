@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "noah copping",
   "license": "ISC",
@@ -12,7 +13,6 @@
     "body-parser": "^1.19.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
-    "mongoose": "^5.6.8",
-    "semantic-ui": "^2.4.2"
+    "mongoose": "^5.6.9"
   }
 }
