@@ -41,9 +41,6 @@ let finalSentance = bigLetters.join(" ");
 	
 });
 
-
-
-
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
 	console.log("CAPI App is ready to transform!!!");
 });
